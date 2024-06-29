@@ -54,3 +54,10 @@
 
 #scope_module
 #load "c.jai";
+
+#if OS == .WINDOWS {
+    #system_library,link_always "winmm";
+    #system_library,link_always "gdi32";
+    #system_library,link_always "user32";
+    #system_library,link_always "shell32";
+}
